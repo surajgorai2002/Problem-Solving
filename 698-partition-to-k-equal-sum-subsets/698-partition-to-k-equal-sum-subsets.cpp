@@ -1,9 +1,9 @@
 class Solution {
 public:
     int vis[17];
-    bool check(vector<int>&nums,int bn,  int k , int currsum,int reqsum,int idx)
+    bool check(vector<int>&nums,int bn,int k ,int currsum,int reqsum,int idx)
     {
-        if(bn==k)
+        if(bn==k-1)
         {
             return true ;
         }
