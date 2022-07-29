@@ -38,6 +38,6 @@ public:
             tmp=max(tmp,i+nums[i]);
             
         }
-        return i==nums.size() ;
+        return true;
     }
 };
