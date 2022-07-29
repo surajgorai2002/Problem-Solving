@@ -23,7 +23,21 @@ public:
         return dp[idx]= false;
     }
     bool canJump(vector<int>& nums) {
-        vector<int> dp(nums.size()+1,-1);
-        return solve(0,nums,dp);
+        // vector<int> dp(nums.size()+1,-1);
+        // return solve(0,nums,dp);
+        
+        
+        int tmp=0;
+        int i=0;
+        for(;i<nums.size();i++)
+        {
+            if(tmp<i)
+            {
+                return false;
+            }
+            tmp=max(tmp,i+nums[i]);
+            
+        }
+        return i==nums.size() ;
     }
 };
